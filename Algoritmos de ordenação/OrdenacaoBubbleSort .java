@@ -30,16 +30,17 @@ class OrdenacaoBubbleSort {
 
     // main
     public static void main(String[] args) {
-        
+        GeraListaOrdenada gerar = new GeraListaOrdenada();
         System.out.println("Teste 1");
-        int[] idades = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        int[] idades = gerar.geraLista();
         bubblesort(idades);
         for (int i : idades) {
             System.out.print(i + ",");
         }
 
+
         System.out.println("\nTeste 2");
-        int[] idades2 = { 9, 8, 7, 6,0,25,45,65, 5, 4, 3, 2, 1 };
+        int[] idades2 = gerar.geraLista();
         bubblesortRecursivo(idades2, idades2.length);
         for (int i : idades2) {
             System.out.print(i + ",");

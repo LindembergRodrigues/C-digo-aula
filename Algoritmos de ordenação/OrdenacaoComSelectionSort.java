@@ -12,7 +12,8 @@ public class OrdenacaoComSelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] lista = { 9, 0, 25,54,6548,1250,12457854,8, 7, 6, 5, 4, 3, 2, 1, 0, -1 };
+        GeraListaOrdenada gerar = new GeraListaOrdenada();
+        int [] lista = gerar.geraLista();
         for (int i : lista) {
             System.out.print(i + ", ");
         }
