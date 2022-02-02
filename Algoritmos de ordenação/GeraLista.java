@@ -6,7 +6,7 @@ public class GeraLista {
         int tamanho = r.nextInt(30);
         int [] lista = new int[tamanho];
         for(int i=0;i<tamanho;i++){
-            lista[i]=r.nextInt(1000);
+            lista[i]=r.nextInt(100);
         }
 
         return lista; 
