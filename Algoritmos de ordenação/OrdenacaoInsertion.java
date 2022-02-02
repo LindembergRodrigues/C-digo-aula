@@ -15,7 +15,7 @@ public class OrdenacaoInsertion {
 
     public static void main (String [] args){
 
-        GeraListaOrdenada gerar = new GeraListaOrdenada();
+        GeraLista gerar = new GeraLista();
         int [] lista = gerar.geraLista();
 
         insertion(lista);

@@ -30,7 +30,7 @@ class OrdenacaoBubbleSort {
 
     // main
     public static void main(String[] args) {
-        GeraListaOrdenada gerar = new GeraListaOrdenada();
+        GeraLista gerar = new GeraLista();
         System.out.println("Teste 1");
         int[] idades = gerar.geraLista();
         bubblesort(idades);

@@ -12,7 +12,7 @@ public class OrdenacaoComSelectionSort {
     }
 
     public static void main(String[] args) {
-        GeraListaOrdenada gerar = new GeraListaOrdenada();
+        GeraLista gerar = new GeraLista();
         int [] lista = gerar.geraLista();
         for (int i : lista) {
             System.out.print(i + ", ");
