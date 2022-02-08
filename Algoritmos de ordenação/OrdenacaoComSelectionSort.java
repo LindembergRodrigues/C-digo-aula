@@ -1,27 +1,35 @@
 public class OrdenacaoComSelectionSort {
-    public static void selectionSort(int[] lista) {
-        for (int i = 0; i < lista.length - 1; i++) {
-            for (int j = i + 1; j < lista.length; j++) {
-                if (lista[j] < lista[i]) {
-                    int aux = lista[j];
-                    lista[j] = lista[i];
-                    lista[i] = aux;
-                }
-            }
+    public static void main(String[] args) {
+        int[] lista = { 9, 8, 6, 5, 4, 73, 0 };
+        quickSort(lista, 0, lista.length);
+        for ( int i: lista ) {
+            System.out.println(i);
         }
     }
 
-    public static void main(String[] args) {
-        GeraLista gerar = new GeraLista();
-        int [] lista = gerar.geraLista();
-        for (int i : lista) {
-            System.out.print(i + ", ");
+    public static void quickSort(int[] lista, int left, int right) {
+        if (left < right) {
+            int pivo = partition(lista, left, right);
+            quickSort(lista, left, pivo - 1);
+            quickSort(lista, pivo + 1, right);
         }
-        System.out.println("\nTeste 2");
-        selectionSort(lista);
-        for (int i : lista) {
-            System.out.print(i + ", ");
+    }
+
+    public static int partition(int[] lista, int left, int right) {
+        int pivo = lista[left];
+        int j = left;
+        for (int i = j; i < right; i++) {
+            if (lista[i] < pivo) {
+                j++;
+                int aux = lista[j];
+                lista[j] = lista[i];
+                lista[i] = aux;
+            }
         }
-        System.out.println("\nFim");
+        int aux = lista[left];
+        lista[left] = lista[j];
+        lista[j] = aux;
+
+        return j;
     }
 }
